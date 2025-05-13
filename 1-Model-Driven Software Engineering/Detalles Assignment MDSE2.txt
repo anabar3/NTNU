@@ -1,0 +1,47 @@
+añadir consntraint o funcionalidad de que al usar en una lesson por ejemplo un resource, se ponga la availability en false en esa fecha o que no se pueda añadir si esta en false en esa fecha
+Añadir entonces date a test
+No añado constraint de que un alumno solo puede hacer una test instance del mismo test porque pueden tener mas intentos
+
+Course tiene people (no estudiantes, simplemente profesores o administradores, ver si puedo poner un constraint para eso) y luego students in course (Que son los estudiantes)
+
+El sender solo puede ser parte de las personas que están en el chat (como represento eso? es una constraint?)
+
+
+QUE ESTOY REPRESENTANDO EN EL METAMODEL
+- Sistema de requests
+- Sistema de cursos y test
+- Sistema de mensajería
+- Sistema de roles (muy por encima, realmente esto igual solo lo represento con métodos o explicar en el readme que seria leyendo las permissions no sé)
+- Sistema de eventos 
+
+Como ver la variabilidad?
+En la universidad: roles como catedrático, estudiante, profesor, TA, secretario, admin...
+ chats grupales; cursos con nombres chulos, muchos alumnos, varios profes y varios admins; lectures como eventos de la misma lección con muchas fechas y requiriendo una clase, hacer varios examenes de varias lectures y obtener su overall score
+En una driving school: roles como estudiante, profesor de practicas y profesor de teoría, admin…
+chats individuales, solo dos cursos, clases practicas con solo un profe y un alumno, exámenes tipo test
+
+IMPORTAR el trabajo para que aparezca
+si que lo estoy entendiendo bien, es como que lo que hago es una idea básica y debería añadir todo lo que podría querer una institución, luego cada una utiliza lo que necesta. Los métodos los tengo que crear en el código (por ejemplo calcular la media... igual tengoq ues er un poco mas detallada de lo que pensaba en lo que implemente. Ya que solo estoy implementando esas cuatro cosas, puedo hacerlo un poco mas extensivo)
+Igual para representar lo de los roles uedo crear una clase intermedia (por ejemplo entre curso, persona y role para indicar los permisos que tiene, las cosas que puede hacer)
+
+
+
+
+
+README FILE
+Explanation of the repository
+The file … has …
+
+General explanation
+The domain is academic institutions. Since what was analyzed and expanded in the document for the first assignment was too big and complex for this exercise I decided to simplify it and show some basic functionalities and variability aspects. Things that any institution may need at different levels and their relations. 
+
+Metamodel explanation
+The features from the <original document> represented in the metamodel are:
+- Request system: a person or a group of people can send requests, both general or for any type of resource. Resources are also a variability point, adjusting to any physical and non physical useful elements that the different insitutions may need. When accepted the requests, the resources are then booked for a time at a specific date. Lessons can also use resources.
+- Course system: a course has basic information, lessons, evaluation systems and material. Referring to courses, just with basic information about them it covers has a lot of variability due to the wide range of types or courses or events in the whole educational domain. Also, as mentioned in the document, materials can be of different types, adapting to any requirement different institutions may have. 
+- Simplified scheduling system: institutions require a scheduling system, and this has been simplified into events that can be tests, lessons or any other kind. Creating a general class like Event ensures that everthing needed is covered by the metamodel. 
+- Test system: assessment is crucial in educational domains, and to cover all the possibilities I created a class with the basic information: the type, the date, the set of questions and the instances for each person, with its associated answers and score, that then will be used to calculate an overall score for the student.
+- Message system: to ensure that every type of the mentioned possibilities in the document (quoting: the system could support different communication models like groupchats, general notifications, forums, role-specific chats or even lesson-specific
+chats), the metamodel has a class that reflects the possibilities for the number of people involved in each chat and an open space for the subject. This could then be developed into more detail if needed.
+
+*The role system is not fully implemented. The class Role is just an example of how it could be linked to the person and have a permissions file for it.

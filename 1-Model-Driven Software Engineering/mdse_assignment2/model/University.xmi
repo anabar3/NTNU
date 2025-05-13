@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdse_assignment2:Institution
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mdse_assignment2="http://www.ntnu.no/mdse_assignment2"
+    xsi:schemaLocation="http://www.ntnu.no/mdse_assignment2 mdse_assignment2.ecore"
+    name="University of Model Driven">
+  <people name="Javier Student"
+      role="Student"
+      id="123455J"
+      overallscore="6">
+    <email>javier@umd.es</email>
+  </people>
+  <people name="Juanjo Student"
+      role="Student"
+      id="73782738P"
+      overallscore="7">
+    <email>juanjo@umd.es</email>
+  </people>
+  <people name="Maria Student"
+      role="Student"
+      id="773733737T"
+      overallscore="9">
+    <email>maria@umd.es</email>
+  </people>
+  <people name="Pablo Teacher"
+      role="Teacher"
+      id="23434343H">
+    <email>pablo@umd.es</email>
+  </people>
+  <people name="Tristan Teacher"
+      role="Teacher"
+      id="8943849L">
+    <email>tristan@umd.es</email>
+  </people>
+  <people name="Alex Admin"
+      role="Administrator"
+      id="0988989J">
+    <email>alex@udm.es</email>
+    <email>administration@udm.es</email>
+    <email>alex@personal.com</email>
+  </people>
+  <people name="Johanna Secretary"
+      role="Secretary"
+      id="09898956X">
+    <email>johanna@udm.es</email>
+    <email>secretary@udm.es</email>
+  </people>
+  <people name="Liam TA phd"
+      role="Student Teacher TeacherAssistant"
+      id="7373734R">
+    <email>liam@udm.com</email>
+  </people>
+  <people name="Eva DH Teacher"
+      role="Teacher DepartmentHead"
+      id="6647364P">
+    <email>eva@udm.es</email>
+  </people>
+  <course name="Data Science I"
+      description="An introduction to fundamental data science concepts, including data analysis, visualization, and basic machine learning techniques"
+      people="123455J 73782738P 23434343H 0988989J 7373734R"
+      courseid="1234">
+    <lesson
+        date="2024-10-03T11:15:00.000+0200"
+        duration="120"
+        resource="2 5">
+      <material
+          name="Lecture recording"/>
+      <material
+          name="Basic Data Science"
+          description="Useful video for those new to Data Science"/>
+      <material
+          name="Units 1 and 2"
+          type="DOCUMENT"/>
+    </lesson>
+    <lesson
+        date="2024-10-10T11:15:00.000+0200"
+        duration="120"
+        resource="2 5">
+      <material
+          name="Schema for Data Analysis"
+          description=""
+          type="IMAGE"/>
+    </lesson>
+    <lesson
+        date="2024-10-17T11:15:00.000+0200"
+        duration="120"
+        resource="2 5"/>
+    <test testName="Exam DSI"
+        resource="3"
+        date="2024-10-24T12:00:00.000+0200"
+        testid="12343"
+        questions="1. What is a data science project?  Give an example.  2. Analyse this data: ...">
+      <testinstance
+          score="8"
+          person="73782738P"
+          answers="Data science is ..."/>
+      <testinstance
+          score="6"
+          person="123455J"
+          answers="The main priciples of data science..."/>
+    </test>
+  </course>
+  <course name="Software Process"
+      description="A course covering the methodologies, tools, and best practices for managing and improving software development processes."
+      people="73782738P 773733737T 8943849L 0988989J 6647364P">
+    <test testName="Exam SP"
+        resource="3"
+        date="2024-12-20T10:00:00.000+0100"
+        testid="23545"
+        duration="120">
+      <testinstance
+          score="6"
+          person="73782738P"
+          answers="..."/>
+      <testinstance
+          score="9"
+          person="773733737T"
+          answers="..."/>
+    </test>
+  </course>
+  <course name="Intelligent Systems"
+      description="A course exploring the design and implementation of systems capable of intelligent behavior, focusing on AI techniques such as machine learning, reasoning, and problem-solving."
+      people="123455J 73782738P 773733737T 0988989J"
+      courseid="23"/>
+  <resource
+      resourceId="1"
+      resourdename="Classroom 1"/>
+  <resource
+      resourceId="2"
+      resourdename="Classroom 2">
+    <resourceavailablity
+        date="2024-10-03T11:15:00.000+0200"
+        duration="120"/>
+    <resourceavailablity
+        date="2024-10-10T11:15:00.000+0200"
+        duration="120"/>
+    <resourceavailablity
+        date="2024-10-17T11:15:00.000+0200"
+        duration="120"/>
+  </resource>
+  <resource
+      resourceId="3"
+      resourdename="Auditorium 1">
+    <resourceavailablity
+        date="2024-10-24T12:00:00.000+0200"
+        duration="120"/>
+    <resourceavailablity
+        date="2024-10-20T10:00:00.000+0200"
+        duration="120"/>
+  </resource>
+  <resource
+      resourceType="EQUIPMENT"
+      resourceId="4"
+      resourdename="Computer 1"/>
+  <resource
+      resourceType="EQUIPMENT"
+      resourceId="5"
+      resourdename="Computer 2"/>
+  <event date="2024-10-03T11:15:00.000+0200"
+      lesson="//@course.0/@lesson.0"
+      people="123455J 73782738P 23434343H 7373734R 0988989J"
+      name="Lesson DSI"
+      eventid="1345"/>
+  <event date="2024-10-17T11:15:00.000+0200"
+      lesson="//@course.0/@lesson.2"
+      people="123455J 73782738P 23434343H 7373734R 0988989J"
+      name="Lesson DSI"
+      eventid="1347"/>
+  <event date="2024-10-03T11:15:00.000+0200"
+      lesson="//@course.0/@lesson.0"
+      people="123455J 73782738P 23434343H 7373734R 0988989J"
+      name="Lesson DSI"
+      eventid="1345"/>
+  <event date="2024-10-24T12:00:00.000+0200"
+      test="12343"
+      people="123455J 73782738P 23434343H 7373734R"
+      name="Exam DSI"
+      eventid="1239"/>
+  <event date="2024-12-06T14:00:00.000+0100"
+      description="Monthly reunion for teachers of the university"
+      visibility="PRIVATE"
+      people="23434343H 8943849L 0988989J 7373734R 6647364P"
+      name="Meeting Teachers"
+      eventid="1238"/>
+  <chat subject="Forum for DSI"
+      people="123455J 73782738P 23434343H 7373734R">
+    <message
+        content="When will the material be uploaded?"
+        time="2024-09-23T15:53:23.000+0200"
+        sender="123455J"/>
+    <message
+        content="You will have it provided later this week"
+        time="2024-09-23T16:02:34.000+0200"
+        sender="23434343H"/>
+  </chat>
+  <chat subject="Forum for Software Process"
+      people="73782738P 773733737T 8943849L 6647364P 0988989J"/>
+  <chat subject="Forum for Intelligent Systems"
+      people="73782738P 773733737T 0988989J 6647364P 123455J"/>
+  <chat subject="Management group"
+      people="23434343H 8943849L 0988989J 09898956X 7373734R 6647364P"/>
+  <chat subject="Personal Admin and Dept. head"
+      people="0988989J 6647364P"/>
+  <role rolename="Teacher"/>
+  <role rolename="Secretary"/>
+  <role rolename="Administrator"/>
+  <role rolename="DepartmentHead"/>
+  <role rolename="Student"/>
+  <role rolename="TeacherAssistant"/>
+</mdse_assignment2:Institution>

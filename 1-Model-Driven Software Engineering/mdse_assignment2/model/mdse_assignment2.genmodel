@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/mdse_assignment2/src-gen" creationIcons="false"
+    editDirectory="/mdse_assignment2.edit/src-gen" editorDirectory="/mdse_assignment2.editor/src-gen"
+    modelPluginID="mdse_assignment2" modelName="Mdse_assignment2" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>mdse_assignment2.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Mdse_assignment2" disposableProviderFactory="true" ecorePackage="mdse_assignment2.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mdse_assignment2.ecore#//testType">
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//testType/EXAM"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//testType/QUIZ"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//testType/TEST"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mdse_assignment2.ecore#//resourceType">
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//resourceType/CLASSROOM"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//resourceType/EQUIPMENT"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//resourceType/TRANSPORT"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mdse_assignment2.ecore#//status">
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//status/PENDING"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//status/APPROVED"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//status/REJECTED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mdse_assignment2.ecore#//visibility">
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//visibility/PUBLIC"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//visibility/PRIVATE"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//visibility/ROLERESTRICTED"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="mdse_assignment2.ecore#//materialtype">
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//materialtype/VIDEO"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//materialtype/LINK"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//materialtype/IMAGE"/>
+      <genEnumLiterals ecoreEnumLiteral="mdse_assignment2.ecore#//materialtype/DOCUMENT"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="mdse_assignment2.ecore#//Date"/>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Institution">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Institution/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/people"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/course"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/event"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/chat"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Institution/role"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//User/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//User/email"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//User/role"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//User/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//User/overallscore"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Role">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Role/rolename"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Role/permissions"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Course">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Course/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Course/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Course/lesson"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Course/test"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Course/people"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Course/courseid"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Lesson">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Lesson/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Lesson/duration"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Lesson/resource"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Lesson/material"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Test">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/testType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/testName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Test/testinstance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Test/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/testid"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/questions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Test/duration"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//TestInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//TestInstance/score"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//TestInstance/person"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//TestInstance/answers"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Resource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Resource/resourceType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Resource/resourceId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Resource/resourdename"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Resource/resourceavailablity"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Request">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Request/message"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Request/status"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Request/solicitant"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Request/resource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Request/requestid"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Event">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Event/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Event/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Event/visibility"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Event/lesson"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Event/test"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Event/people"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Event/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Event/eventid"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Chat">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Chat/subject"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Chat/message"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Chat/people"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Message">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Message/content"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Message/time"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference mdse_assignment2.ecore#//Message/sender"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//Material">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Material/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Material/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//Material/type"/>
+    </genClasses>
+    <genClasses ecoreClass="mdse_assignment2.ecore#//ResourceAvailablity">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//ResourceAvailablity/availability"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//ResourceAvailablity/date"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mdse_assignment2.ecore#//ResourceAvailablity/duration"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
